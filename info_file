@@ -1,0 +1,39 @@
+To  install docker on linux os
+1.  sudo apt-get update
+2.  sudo apt-get install docker-ce docker-ce-ci containerd.io
+3.  docker --version
+4.  docker info
+5.  docker version
+6.  docker image pull nginx:latest
+7.  docker image pull alpine:latest
+8.  docker image ls OR docker images
+9.  docker image rm alpine:latest
+10. docker container stop containerid
+11. docker container ps -a
+12. docker ps -a
+13. docker container start containername
+14. docker container ls -a
+15. docker container rm containername
+16. docker container run -it sh
+	run in interactive mode
+17. docker container run -d -p 5010:80 amirpinder/helloworld:latest
+	run container in detach/background mode say amirpinder/flag
+18. docker ps
+19. docker container run -d --name docker_app -p 5020:80 amirpinger/flag
+20. FROM nginx
+    COPY . /usr/share/nginx/html
+21. FROM alpine
+    LABEL maintainer="xyz@gmail.com"
+    RUN apk add --update nodejs nodejs-npm
+    COPY . /src
+    WORKDIR /src
+    RUN npm install
+    ENV CREATEDBY="abc xyz"
+    EXPOSE 8080
+    ENTRYPOINT ["node","./app.js"]
+22. docker build -t appimagename .
+23. docker push username/appimagename:latest
+24. docker tag appimagename username/appimagename/
+	to copy already created image to new image say appimagename to username/appimagename/
+25. docker run -d --name appimagename -p 8700:8080 username/appimagename/
+26. docker run -it --name=test-app -v /home/aamir/test-app-folder:test-app-container imagename
