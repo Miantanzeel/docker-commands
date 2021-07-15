@@ -1,3 +1,35 @@
+Bad Old Days
+Problem: one app one server
+Solution: VMWare
+Reason: 
+	1. Unable to judge resource requirements
+	2. Different infrastructure and dependencies
+Disadvantages:
+	1. Very costly
+	2. Resource wastage
+	3. Many servers to manage
+Benefits of virtualization
+	1. Multiple app on single server
+	2. Different OS and dependencies on same server using VMs
+	3. Much efficient
+	4. save lot of resources
+Disadvantages of VMs:
+	1. OS consumes lots of resources
+	2. Licensing cost of every OS instance
+Hypervisor(VM monitor):
+	It abstracts or isolates operating systems and applications from the underlying computer hardware
+	Share system's physical resources like
+	1. Process cycles
+	2. Memory Space
+	3. Network bandwidth and so on
+Containerd:
+	Act as a bridge between daemon and runc
+Images: 
+	Lightweight, standalone, executable package of software.
+Code, Runtime, System tools, System libraries, Settings
+Images become containers when they run on Docker Engine
+
+
 To  install docker on linux os
 1.  sudo apt-get update
 2.  sudo apt-get install docker-ce docker-ce-ci containerd.io
@@ -11,6 +43,7 @@ To  install docker on linux os
 10. docker container stop containerid
 11. docker container ps -a
 12. docker ps -a
+12.1. docker exec -it 
 13. docker container start containername
 14. docker container ls -a
 15. docker container rm containername
